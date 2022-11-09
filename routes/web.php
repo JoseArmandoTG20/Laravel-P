@@ -18,6 +18,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/login', function () {
+    return view('auth.login');
+})->name('login');
+
+Route::get('/home', function () {
+    return view('home');
+})->name('home');
+
 Route::get('/users',[UserController::class,'index']);
 
 Route::get('/users',[UserController::class,'create']);
@@ -26,4 +34,5 @@ Route::get('/users',[UserController::class,'show']);
 
 Route::get('/users',[UserController::class,'store']);
 
+Route::post('/users', [UserController::class, 'store']);
 

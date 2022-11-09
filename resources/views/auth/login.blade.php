@@ -8,48 +8,26 @@
 <body>
 
 	<h1>
-		Registro de Usuario
+		Login
 	</h1>
 
-	<form method="post" action="http://127.0.0.1:8000/users/">
+	<form method="post" action="{{ url('login') }}">
 
 		@csrf
-
-		<label>
-			Nombre
-		</label>
-		<input type="text" name="name">
-        <br>
-		<br>
-
-		<label>
-			Apellido
-		</label>
-		<input type="text" name="lastname">
-
-		<br>
-		<br>
-
-
 		<label>
 			Email
 		</label>
 		<input type="email" name="email">
-
         <br>
 		<br>
-
 		<label>
-			Apellido
+			Password
 		</label>
-		<input type="text" name="lastname">
-
+		<input type="password" name="password">
 		<br>
 		<br>
-
-
 		<button>
-			Guardar
+			ACCEDER
 		</button>
 	</form>
 

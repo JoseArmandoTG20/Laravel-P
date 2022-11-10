@@ -26,13 +26,14 @@ Route::get('/home', function () {
     return view('home');
 })->name('home');
 
-Route::get('/users',[UserController::class,'index']);
 
-Route::get('/users',[UserController::class,'create']);
+Route::middleware(['auth'])->group(function () {
+    Route::get('/users',[UserController::class,'index']);
 
-Route::get('/users',[UserController::class,'show']);
+    Route::get('/users/create',[UserController::class,'create']);
 
-Route::get('/users',[UserController::class,'store']);
+    Route::get('/users/{id}',[UserController::class,'show']);
 
-Route::post('/users', [UserController::class, 'store']);
+    Route::post('/users', [UserController::class, 'store']);
+});
 

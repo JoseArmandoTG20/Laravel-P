@@ -17,18 +17,16 @@ class ClientSeeder extends Seeder
     {
         $user = new User();
         $user -> name = 'Armando ';
-        $user->lastname = 'Torres';
+        $user -> lastname = 'Torres';
         $user -> email = 'armandopromx@gmail.com';
         $user -> password = 'armando12345';
         $user -> save();
 
         $user = new User();
         $user -> name = 'Dinah';
-        $user->lastname = 'Carpenter';
+        $user -> lastname = 'Carpenter';
         $user -> email = 'dinahG@gmail.com';
         $user -> password = '123456789';
         $user -> save();
     }
 }
-
-

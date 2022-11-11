@@ -35,5 +35,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/users/{id}',[UserController::class,'show']);
 
     Route::post('/users', [UserController::class, 'store']);
+
+    Route::put('/users', [UserController::class,'update']);
 });
 

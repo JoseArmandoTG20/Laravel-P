@@ -8,9 +8,12 @@
 </head>
 <body>
     <h1>Editar Usuario</h1>
-    <form method="post" action="http://127.0.0.1:8000/users/">
+    <form method="post" action="{{url('users')}}">
 
 		@csrf
+        @method('put')
+
+        <input type="hidden" name='id' value="{{$user->id}}">
 
 		<label>
 			Nombre

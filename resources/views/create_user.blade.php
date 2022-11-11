@@ -30,7 +30,6 @@
 		<br>
 		<br>
 
-
 		<label>
 			Email
 		</label>
@@ -39,15 +38,11 @@
         <br>
 		<br>
 
-		<label>
-			Apellido
+		label>
+			Password
 		</label>
-		<input type="text" name="lastname">
-
+		<input type="password" name="password">
 		<br>
-		<br>
-
-
 		<button>
 			Guardar
 		</button>
